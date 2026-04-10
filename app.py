@@ -80,7 +80,7 @@ def train_model():
 
 print("Training ensemble model...")
 MODEL, SCALER, FEATURES, TRAIN_METRICS = train_model()
-print("Model ready - open http://127.0.0.1:5000")
+print("Model ready!")
 
 @app.route('/')
 def index():
@@ -130,4 +130,5 @@ def bulk_predict():
     return jsonify(df.to_dict(orient='records'))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
