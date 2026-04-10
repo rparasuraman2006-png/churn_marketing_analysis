@@ -479,12 +479,10 @@ footer{
 </head>
 <body>
 
-<!-- Particles -->
 <div id="particles"></div>
 
 <div class="wrapper">
 
-<!-- ═══ HEADER ═══ -->
 <header>
   <div class="logo-ring">
     <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,21 +504,16 @@ footer{
   <div class="header-line"></div>
 </header>
 
-<!-- ═══ NAV ═══ -->
 <nav>
   <button class="tab active" onclick="showTab('dashboard')">◈ Dashboard</button>
   <button class="tab" onclick="showTab('predict')">◉ Predict</button>
   <button class="tab" onclick="showTab('bulk')">◫ Bulk Analysis</button>
 </nav>
 
-<!-- ════════════════════════════════════
-     DASHBOARD TAB
-════════════════════════════════════ -->
 <div id="tab-dashboard" class="section active">
   <div class="section-header"><h2>Model Performance</h2></div>
 
   <div class="metric-grid" id="metrics-grid">
-    <!-- filled by JS -->
     <div class="metric-card"><div class="metric-label">Loading…</div></div>
   </div>
 
@@ -544,9 +537,6 @@ footer{
   </div>
 </div>
 
-<!-- ════════════════════════════════════
-     PREDICT TAB
-════════════════════════════════════ -->
 <div id="tab-predict" class="section">
   <div class="section-header"><h2>Customer Risk Assessment</h2></div>
 
@@ -657,9 +647,6 @@ footer{
   </div>
 </div>
 
-<!-- ════════════════════════════════════
-     BULK TAB
-════════════════════════════════════ -->
 <div id="tab-bulk" class="section">
   <div class="section-header"><h2>Bulk Customer Analysis</h2></div>
   <div class="bulk-controls">
@@ -689,17 +676,12 @@ footer{
   </div>
 </div>
 
-</div><!-- /wrapper -->
-
-<footer>
-  CHURNSHIELD &nbsp;·&nbsp; ENSEMBLE ML ENGINE &nbsp;·&nbsp; RUNNING LOCALLY
+</div><footer>
+  CHURNSHIELD &nbsp;·&nbsp; ENSEMBLE ML ENGINE &nbsp;·&nbsp; LIVE ON RENDER
 </footer>
 
-<!-- ══════════════════════════════════════
-     JAVASCRIPT
-══════════════════════════════════════ -->
 <script>
-const API = 'http://127.0.0.1:5000/api';
+const API = '/api';
 
 /* ─── Particles ─── */
 (function(){
